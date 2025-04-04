@@ -11,6 +11,8 @@ public class Lesson_3 {
         checkYear(200);
         switchOnesAndZeros();
         fillArrayWithNumbers();
+        multiplyByTwo();
+        diagonalOnes();
     }
 
     private static void printThreeWords() {
@@ -110,7 +112,36 @@ public class Lesson_3 {
         }
     }
 
-    private
+    private static void multiplyByTwo () {
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int index : arr) {
+            if (arr[index] < 6) {
+                arr[index] *= 2;
+            }
+        }
+    }
+
+    private static void diagonalOnes () {
+        int index = 3;
+        int[][] matrix = new int[index][index];
+        for (int one = 0; one < index; one++) {
+            for (int two = 0; two < index; two++) {
+                if (one == two || one + two == index - 1) {
+                    matrix[one][two] = 1;
+                } else {
+                    matrix[one][two] = 0;
+                }
+            }
+        }
+    }
+
+    private static int[] returnArray(int len, int initialValue) {
+        int[] arr = new int[len];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = initialValue;
+        }
+        return arr;
+    }
 
 }
 
