@@ -4,15 +4,16 @@ public class Lesson_3 {
         checkSumSign();
         printColor();
         compareNumbers();
-        checkRange(-10, 8);
-        checkIfPositive(10);
-        checkIfNegative(-23);
-        multiplePrint("Строка", 3);
-        checkYear(200);
+        checkRange(-10, 20);
+        checkIfPositive(0);
+        checkIfNegative(1);
+        multiplePrint("Строка", 4);
+        checkYear(700);
         switchOnesAndZeros();
         fillArrayWithNumbers();
         multiplyByTwo();
         diagonalOnes();
+        returnArray(5, 5);
     }
 
     private static void printThreeWords() {
@@ -21,7 +22,7 @@ public class Lesson_3 {
 
     private static void checkSumSign() {
         int a = -5;
-        int b = 10;
+        int b = 5;
         if (a + b >= 0) {
             System.out.println("Сумма положительная");
         } else {
@@ -43,7 +44,7 @@ public class Lesson_3 {
 
     private static void compareNumbers() {
         int a, b;
-        a = 15;
+        a = 20;
         b = 20;
         if (a >= b) {
             System.out.println("a >= b");
@@ -56,7 +57,9 @@ public class Lesson_3 {
         int sum = a + b;
         if ((sum >= 10) && (sum <= 20)) {
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
     }
 
     private static void checkIfPositive(int a) {
@@ -82,14 +85,13 @@ public class Lesson_3 {
     }
 
     private static boolean checkYear (int year) {
-        if (year % 4 == 0) {
+        if (year % 4 == 0 && year % 400 == 0) {
             return true;
         } else if (year % 4 == 0 && year % 100 == 0) {
             return false;
-        } else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+        } else {
             return true;
         }
-        else return false;
     }
 
     private static void switchOnesAndZeros() {
@@ -105,18 +107,16 @@ public class Lesson_3 {
 
     private static void fillArrayWithNumbers () {
         int [] arr = new int[100];
-        int index = 1;
-        for (int i : arr) {
-            arr[i] = index;
-            index++;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
         }
     }
 
     private static void multiplyByTwo () {
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        for (int index : arr) {
-            if (arr[index] < 6) {
-                arr[index] *= 2;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6) {
+                arr[i] *= 2;
             }
         }
     }
@@ -142,6 +142,5 @@ public class Lesson_3 {
         }
         return arr;
     }
-
 }
 
