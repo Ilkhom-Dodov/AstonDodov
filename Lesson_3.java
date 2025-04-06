@@ -135,7 +135,7 @@ public class Lesson_3 {
         }
     }
 
-    private static int[] returnArray(int len, int initialValue) {
+    private static int[] returnArray (int len, int initialValue) {
         int[] arr = new int[len];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = initialValue;
@@ -143,4 +143,3 @@ public class Lesson_3 {
         return arr;
     }
 }
-
