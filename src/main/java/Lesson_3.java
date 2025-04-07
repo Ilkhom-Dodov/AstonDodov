@@ -8,7 +8,7 @@ public class Lesson_3 {
         checkIfPositive(0);
         checkIfNegative(1);
         multiplePrint("Строка", 4);
-        checkYear(700);
+        isYearLeap(700);
         switchOnesAndZeros();
         fillArrayWithNumbers();
         multiplyByTwo();
@@ -84,14 +84,8 @@ public class Lesson_3 {
         }
     }
 
-    private static boolean checkYear (int year) {
-        if (year % 4 == 0 && year % 400 == 0) {
-            return true;
-        } else if (year % 4 == 0 && year % 100 == 0) {
-            return false;
-        } else {
-            return true;
-        }
+    private static boolean isYearLeap (int year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 
     private static void switchOnesAndZeros() {
